@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="akJ-X3-FkX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="W6N-T4-GXh">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="ARCLViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="akJ-X3-FkX" customClass="ViewController" customModule="LocationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Ga-Dm-BQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7D4-FY-FLP">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </view>
+                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.69999998807907104" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aAg-3d-TMw">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="akJ-X3-FkX" id="hlR-at-aZa"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qA-aC-M6S">
+                                <rect key="frame" x="16" y="786" width="382" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="aYC-XQ-fMe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Tap a node to see location" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E76-nf-a8c">
+                                <rect key="frame" x="16" y="748" width="382" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vky-tC-5Sr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZWT-6i-zJs"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aAg-3d-TMw" firstAttribute="trailing" secondItem="ZWT-6i-zJs" secondAttribute="trailing" id="7BI-PR-D6X"/>
+                            <constraint firstItem="aAg-3d-TMw" firstAttribute="bottom" secondItem="5Ga-Dm-BQJ" secondAttribute="bottom" id="8xB-Cv-vER"/>
+                            <constraint firstItem="E76-nf-a8c" firstAttribute="leading" secondItem="5qA-aC-M6S" secondAttribute="leading" id="MWv-BO-Xzf"/>
+                            <constraint firstItem="aAg-3d-TMw" firstAttribute="height" secondItem="5Ga-Dm-BQJ" secondAttribute="height" multiplier="1/2" id="SBd-gW-xdt"/>
+                            <constraint firstItem="ZWT-6i-zJs" firstAttribute="bottom" secondItem="5qA-aC-M6S" secondAttribute="bottom" constant="20" id="TbN-rX-PCB"/>
+                            <constraint firstItem="7D4-FY-FLP" firstAttribute="leading" secondItem="ZWT-6i-zJs" secondAttribute="leading" id="dfV-lQ-ZJb"/>
+                            <constraint firstItem="aAg-3d-TMw" firstAttribute="leading" secondItem="ZWT-6i-zJs" secondAttribute="leading" id="fAC-ya-Y32"/>
+                            <constraint firstItem="7D4-FY-FLP" firstAttribute="bottom" secondItem="5Ga-Dm-BQJ" secondAttribute="bottom" id="hkd-sE-Krv"/>
+                            <constraint firstItem="ZWT-6i-zJs" firstAttribute="trailing" secondItem="5qA-aC-M6S" secondAttribute="trailing" constant="16" id="jcZ-9s-SIr"/>
+                            <constraint firstItem="5qA-aC-M6S" firstAttribute="top" secondItem="E76-nf-a8c" secondAttribute="bottom" constant="8" symbolic="YES" id="mGU-OS-iua"/>
+                            <constraint firstItem="E76-nf-a8c" firstAttribute="trailing" secondItem="5qA-aC-M6S" secondAttribute="trailing" id="nZC-Tr-DQq"/>
+                            <constraint firstItem="ZWT-6i-zJs" firstAttribute="trailing" secondItem="7D4-FY-FLP" secondAttribute="trailing" id="p3b-eS-iMj"/>
+                            <constraint firstItem="5qA-aC-M6S" firstAttribute="leading" secondItem="ZWT-6i-zJs" secondAttribute="leading" constant="16" id="wOq-if-8sr"/>
+                            <constraint firstItem="7D4-FY-FLP" firstAttribute="top" secondItem="5Ga-Dm-BQJ" secondAttribute="top" id="wfG-q2-Cuu"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="poh-Bm-0RL"/>
+                    <connections>
+                        <outlet property="contentView" destination="7D4-FY-FLP" id="WhW-Vf-g0M"/>
+                        <outlet property="infoLabel" destination="5qA-aC-M6S" id="FRm-5V-d1j"/>
+                        <outlet property="mapView" destination="aAg-3d-TMw" id="2KE-ru-WrE"/>
+                        <outlet property="nodePositionLabel" destination="E76-nf-a8c" id="iAb-YI-Je9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rba-4p-Haa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="786" y="66"/>
         </scene>
     </scenes>
 </document>

@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0FDDAEB9C0523B8DF299F9 /* Pods_LocationDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A6AAF0DE6748E78A62F9CF /* Pods_LocationDemo.framework */; };
+		802B06CD28AD8BF700CF2CD8 /* ARCL in Frameworks */ = {isa = PBXBuildFile; productRef = 802B06CC28AD8BF700CF2CD8 /* ARCL */; };
 		BD22919128AD6F2600C04683 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22919028AD6F2600C04683 /* AppDelegate.swift */; };
 		BD22919328AD6F2600C04683 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22919228AD6F2600C04683 /* SceneDelegate.swift */; };
 		BD22919528AD6F2600C04683 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD22919428AD6F2600C04683 /* ViewController.swift */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4652DD6EDBC23C4A0EDCC146 /* Pods-LocationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationDemo.release.xcconfig"; path = "Target Support Files/Pods-LocationDemo/Pods-LocationDemo.release.xcconfig"; sourceTree = "<group>"; };
+		63A6AAF0DE6748E78A62F9CF /* Pods_LocationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E9C5479961EE1A38C9BEF30 /* Pods-LocationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationDemo.debug.xcconfig"; path = "Target Support Files/Pods-LocationDemo/Pods-LocationDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		BD22918D28AD6F2600C04683 /* LocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD22919028AD6F2600C04683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD22919228AD6F2600C04683 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +36,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802B06CD28AD8BF700CF2CD8 /* ARCL in Frameworks */,
+				7B0FDDAEB9C0523B8DF299F9 /* Pods_LocationDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66C1D20439C6BD61BBBC036B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63A6AAF0DE6748E78A62F9CF /* Pods_LocationDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD22918428AD6F2600C04683 = {
 			isa = PBXGroup;
 			children = (
 				BD22918F28AD6F2600C04683 /* LocationDemo */,
 				BD22918E28AD6F2600C04683 /* Products */,
+				FA1CA01767A6B5C9A2F26336 /* Pods */,
+				66C1D20439C6BD61BBBC036B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,15 @@
 			path = LocationDemo;
 			sourceTree = "<group>";
 		};
+		FA1CA01767A6B5C9A2F26336 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E9C5479961EE1A38C9BEF30 /* Pods-LocationDemo.debug.xcconfig */,
+				4652DD6EDBC23C4A0EDCC146 /* Pods-LocationDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +100,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD2291A128AD6F2700C04683 /* Build configuration list for PBXNativeTarget "LocationDemo" */;
 			buildPhases = (
+				AB12BAE20F0541B11B682C50 /* [CP] Check Pods Manifest.lock */,
 				BD22918928AD6F2600C04683 /* Sources */,
 				BD22918A28AD6F2600C04683 /* Frameworks */,
 				BD22918B28AD6F2600C04683 /* Resources */,
+				792764A258D2B38B48982344 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LocationDemo;
+			packageProductDependencies = (
+				802B06CC28AD8BF700CF2CD8 /* ARCL */,
+			);
 			productName = LocationDemo;
 			productReference = BD22918D28AD6F2600C04683 /* LocationDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -103,7 +134,7 @@
 				};
 			};
 			buildConfigurationList = BD22918828AD6F2600C04683 /* Build configuration list for PBXProject "LocationDemo" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,6 +142,9 @@
 				Base,
 			);
 			mainGroup = BD22918428AD6F2600C04683;
+			packageReferences = (
+				802B06CB28AD8BF700CF2CD8 /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */,
+			);
 			productRefGroup = BD22918E28AD6F2600C04683 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		792764A258D2B38B48982344 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocationDemo/Pods-LocationDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LocationDemo/Pods-LocationDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LocationDemo/Pods-LocationDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB12BAE20F0541B11B682C50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LocationDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD22918928AD6F2600C04683 /* Sources */ = {
@@ -273,6 +349,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -282,13 +359,19 @@
 		};
 		BD2291A228AD6F2700C04683 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4652DD6EDBC23C4A0EDCC146 /* Pods-LocationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWF6TLVH78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocationDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application will use location for Augmented Reality.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application will use location for Augmented Reality.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This application will use location for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -299,7 +382,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LocationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LocationDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -309,13 +392,19 @@
 		};
 		BD2291A328AD6F2700C04683 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4652DD6EDBC23C4A0EDCC146 /* Pods-LocationDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BWF6TLVH78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LocationDemo/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This application will use the camera for Augmented Reality.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This application will use location for Augmented Reality.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This application will use location for Augmented Reality.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This application will use location for Augmented Reality.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +415,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.LocationDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LocationDemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -356,6 +445,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		802B06CB28AD8BF700CF2CD8 /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ProjectDent/ARKit-CoreLocation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		802B06CC28AD8BF700CF2CD8 /* ARCL */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 802B06CB28AD8BF700CF2CD8 /* XCRemoteSwiftPackageReference "ARKit-CoreLocation" */;
+			productName = ARCL;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD22918528AD6F2600C04683 /* Project object */;
 }
